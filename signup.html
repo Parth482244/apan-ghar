@@ -4,35 +4,20 @@
     <title>Signup - Apna Ghar</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="auth-bg">
+<body>
 
-<div class="auth-wrapper">
-
-    <div class="brand">
-        <h1>🏠 APNA GHAR</h1>
-        <p>Real Estate Intelligence Platform</p>
-    </div>
-
-    <div class="auth-container">
-        <h2>Create Account</h2>
-
-        <input type="email" id="signupEmail" placeholder="Enter Email">
-        <input type="password" id="signupPassword" placeholder="Create Password">
-
-        <button onclick="signup()">Sign Up</button>
-
-        <p class="switch-text">
-            Already have an account?
-            <a href="index.html">Login</a>
-        </p>
-    </div>
-
+<div class="auth-container">
+    <h2>Create Account</h2>
+    <input type="email" id="signupEmail" placeholder="Email">
+    <input type="password" id="signupPassword" placeholder="Password">
+    <button onclick="signup()">Sign Up</button>
+    <p>Already have account? <a href="index.html">Login</a></p>
 </div>
+
+<script src="auth.js"></script>
 
 <div class="footer">
     © 2026 AP Ventures
 </div>
-
-<script src="auth.js"></script>
 </body>
 </html>
