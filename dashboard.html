@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>APAN GHAR Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="logo">
+        <h1>🏠 APAN GHAR</h1>
+        <button onclick="logout()" style="float:right;">Logout</button>
+    </div>
+
+    <div class="card">
+        <h4>Avg Rent Per Sqft</h4>
+        <h2 id="avgRent">0</h2>
+    </div>
+
+    <div class="filters">
+        <select id="cityFilter"></select>
+        <select id="localityFilter"></select>
+        <select id="typeFilter">
+            <option value="All">All Types</option>
+            <option>1 BHK</option>
+            <option>2 BHK</option>
+            <option>3 BHK</option>
+            <option>4 BHK</option>
+        </select>
+        <select id="furnishFilter">
+            <option value="All">All Furnishing</option>
+            <option>Fully Furnished</option>
+            <option>Semi Furnished</option>
+            <option>Unfurnished</option>
+        </select>
+
+        <input type="file" id="excelUpload" accept=".xlsx,.csv"/>
+    </div>
+</div>
+
+<div class="dashboard">
+    <div class="chart-box">
+        <h3>Rents by Furnishing</h3>
+        <canvas id="pieChart"></canvas>
+    </div>
+
+    <div class="chart-box">
+        <h3>Rents by Type</h3>
+        <canvas id="barChart"></canvas>
+    </div>
+</div>
+
+<div class="table-box">
+<table>
+    <thead>
+        <tr>
+            <th>City</th>
+            <th>Locality</th>
+            <th>Type</th>
+            <th>Furnishing</th>
+            <th>Area</th>
+            <th>Rent</th>
+            <th>Deposit</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+</div>
+
+<script>
+    if(!localStorage.getItem("loggedInUser")){
+    window.location.href = "index.html";
+    }
+</script>
+
+<script>
+function logout(){
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "index.html";
+}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
