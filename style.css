@@ -99,3 +99,13 @@ tr:nth-child(even){
     border-radius:6px;
     cursor:pointer;
 }
+
+.footer{
+    position: fixed;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
