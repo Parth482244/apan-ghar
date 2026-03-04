@@ -23,7 +23,7 @@ function login(){
 
     if(email === storedEmail && password === storedPassword){
         localStorage.setItem("loggedInUser", email);
-        window.location.href = "dashboard.html";
+        window.location.href = "property-type.html";
     } else {
         alert("Invalid credentials");
     }

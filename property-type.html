@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Apna Ghar - Choose Property Type</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#f5f5f5;
+margin:0;
+}
+
+.selection-container{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+gap:50px;
+}
+
+.option-box{
+width:300px;
+height:200px;
+background:white;
+border-radius:12px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.option-box:hover{
+transform:scale(1.05);
+background:#ff4b2b;
+color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="selection-container">
+
+<div class="option-box" onclick="goRent()">
+Rent Properties
+</div>
+
+<div class="option-box" onclick="goBuy()">
+Buy Properties
+</div>
+
+</div>
+
+<script>
+
+function goRent(){
+window.location.href="dashboard.html";
+}
+
+function goBuy(){
+window.location.href="dashboard.html";
+}
+
+</script>
+
+</body>
+</html>
