@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Apna Ghar - Buy Property</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.buy-container{
+padding:30px;
+}
+
+.price-card{
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.predict-box{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+width:400px;
+}
+
+input,select{
+padding:8px;
+margin:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🏠 APNA GHAR - Buy Property Prices</h1>
+
+<div class="buy-container">
+
+<div class="price-card">
+
+<h2>Select City & Locality</h2>
+
+<select id="citySelect"></select>
+<select id="localitySelect"></select>
+
+<select id="bhkSelect">
+<option value="1">1 BHK</option>
+<option value="2">2 BHK</option>
+<option value="3">3 BHK</option>
+<option value="4">4 BHK</option>
+</select>
+
+</div>
+
+<div class="predict-box">
+
+<h2>Price Prediction</h2>
+
+<label>Enter Carpet Area (sq ft)</label><br>
+
+<input type="number" id="carpetArea" placeholder="Example: 850">
+
+<button onclick="predictPrice()">Predict Price</button>
+
+<h3 id="priceResult"></h3>
+
+</div>
+
+</div>
+
+<script src="buy-script.js"></script>
+
+</body>
+</html>
